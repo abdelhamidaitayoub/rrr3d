@@ -17,7 +17,7 @@ const link = new OpenAPILink(contract, {
       throw new Error("OpenAPILink is not allowed on the server side.");
     }
 
-    return `${window.location.origin}/api`;
+    return `${window.location.origin}/rpc`;
   },
 });
 

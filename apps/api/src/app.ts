@@ -12,12 +12,15 @@ export const app = new Elysia()
     })
   )
   .use(logixlysia())
-  .get("/", () => ({ hello: "hello" }), {
+  .get("/", ({ query: { command } }) => ({ command }), {
+    query: z.object({
+      command: z.string(),
+    }),
     response: z.object({
-      hello: z.string(),
+      command: z.string(),
     }),
   })
-  .get("/echo", () => ({ message: "Bonjour" }), {
+  .get("/echo", () => ({ message: "hello" }), {
     response: z.object({
       message: z.string(),
     }),
