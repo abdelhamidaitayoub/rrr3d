@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/react",
+    "ultracite/biome/next",
+    "ultracite/biome/vitest"
+  ],
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "!**/src/generated",
+      "!packages/ui/src/components/cn",
+      "!packages/ui/src/lib",
+      "!packages/ui/src/hooks",
+      "!.agents"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "performance": {
+        "noNamespaceImport": "off"
+      }
+    }
+  }
+}
