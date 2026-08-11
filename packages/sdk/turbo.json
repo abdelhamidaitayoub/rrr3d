@@ -1,0 +1,16 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["api#openapi:export"],
+      "outputs": ["src/generated/**"]
+    },
+    "generate": {
+      "dependsOn": ["api#openapi:export"],
+      "outputs": ["src/generated/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["generate"]
+    }
+  }
+}

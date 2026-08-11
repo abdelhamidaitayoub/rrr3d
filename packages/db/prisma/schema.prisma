@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated"
+}
+
+generator zod {
+  provider = "prisma-zod-generator"
+  output   = "../src/generated/schemas"
+}
+
+datasource db {
+  provider     = "postgresql"
+  relationMode = "prisma"
+}
+
+// This is a stub model.
+// Delete it and add your own Prisma models.
+model Page {
+  id   Int    @id @default(autoincrement())
+  name String
+}

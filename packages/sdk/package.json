@@ -1,0 +1,24 @@
+{
+  "name": "@repo/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/generated/index.ts",
+    "./client": "./src/generated/client/index.ts",
+    "./zod": "./src/generated/zod.gen.ts"
+  },
+  "scripts": {
+    "build": "bun run generate",
+    "clean": "git clean -xdf .turbo node_modules src/generated",
+    "dev": "openapi-ts -f openapi-ts.config.ts -w",
+    "generate": "openapi-ts -f openapi-ts.build.config.ts",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.99.0"
+  }
+}

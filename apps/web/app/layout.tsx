@@ -1,7 +1,7 @@
 import { Geist_Mono, Manrope } from "next/font/google";
 
-import "@workspace/ui/globals.css";
-import { cn } from "@workspace/ui/lib/utils";
+import "@repo/ui/globals.css";
+import { cn } from "@repo/ui/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" });

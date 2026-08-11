@@ -5,13 +5,14 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**", "**/generated/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
+    "openapi:export": {
+      "outputs": ["openapi.json"]
     },
-    "format": {
-      "dependsOn": ["^format"]
+    "generate": {
+      "dependsOn": ["api#openapi:export"],
+      "outputs": ["src/generated/**"]
     },
     "typecheck": {
       "dependsOn": ["^typecheck"]
@@ -19,6 +20,25 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "//#check": {},
+    "//#fix": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "migrate": {
+      "cache": false
+    },
+    "migrate:deploy": {
+      "cache": false
+    },
+    "//#clean": {
+      "cache": false
     }
   }
 }

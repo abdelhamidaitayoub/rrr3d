@@ -1,0 +1,9 @@
+{
+  "extends": "@repo/typescript-config/internal-package.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@repo/sdk/*": ["./src/*"]
+    }
+  }
+}

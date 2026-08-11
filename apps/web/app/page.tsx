@@ -1,4 +1,4 @@
-import { Button } from "@workspace/ui/components/cn/button";
+import { Button } from "@repo/ui/components/cn/button";
 
 export default function Page() {
   return (
