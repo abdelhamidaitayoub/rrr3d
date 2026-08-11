@@ -17,10 +17,7 @@ export const app = new Elysia()
       hello: z.string(),
     }),
   })
-  .post("/echo", ({ body }) => body, {
-    body: z.object({
-      message: z.string(),
-    }),
+  .get("/echo", () => ({ message: "Bonjour" }), {
     response: z.object({
       message: z.string(),
     }),

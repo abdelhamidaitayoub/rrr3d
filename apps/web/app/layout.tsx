@@ -1,8 +1,9 @@
+import "@/lib/rpc/orpc.server"; // for pre-rendering
 import { Geist_Mono, Manrope } from "next/font/google";
 
 import "@repo/ui/globals.css";
 import { cn } from "@repo/ui/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Providers } from "@/components/providers";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -28,7 +29,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

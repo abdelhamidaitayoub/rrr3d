@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/generated/index.ts",
-    "./client": "./src/generated/client/index.ts",
+    ".": "./src/generated/orpc.gen.ts",
+    "./orpc": "./src/generated/orpc.gen.ts",
     "./zod": "./src/generated/zod.gen.ts"
   },
   "scripts": {
@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
+    "@orpc/contract": "^1.15.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {

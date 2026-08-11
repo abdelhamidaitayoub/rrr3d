@@ -7,11 +7,12 @@ export default defineConfig({
   },
   output: {
     path: "./src/generated",
+    tsConfigPath: "./tsconfig.json",
   },
   plugins: [
     "zod",
     {
-      name: "@hey-api/sdk",
+      name: "orpc",
       validator: true,
     },
   ],
