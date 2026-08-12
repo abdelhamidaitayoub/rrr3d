@@ -1,0 +1,25 @@
+{
+  "name": "@repo/auth",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/auth.ts",
+    "./keys": "./src/keys.ts",
+    "./openapi": "./src/openapi.ts"
+  },
+  "scripts": {
+    "auth:generate": "better-auth generate --config src/auth.ts --output ../db/prisma/schema.prisma --yes",
+    "clean": "git clean -xdf node_modules",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/db": "workspace:*",
+    "@t3-oss/env-core": "^0.13.11",
+    "better-auth": "^1.6.27",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@better-auth/cli": "^1.4.21",
+    "@repo/typescript-config": "workspace:*"
+  }
+}

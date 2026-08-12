@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@elysia/openapi": "^1.4.15",
+    "@repo/auth": "workspace:*",
     "@repo/db": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@sinclair/typebox": "^0.34.52",

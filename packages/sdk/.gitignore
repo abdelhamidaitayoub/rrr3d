@@ -1,2 +1,5 @@
 # SDK code is generated from the API OpenAPI spec during build.
 /src/generated/
+
+# openapi-ts error logs
+openapi-ts-error-*.log

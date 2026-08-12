@@ -1,9 +1,10 @@
+import { keys as auth } from "@repo/auth/keys";
 import { keys as db } from "@repo/db/keys";
 import { createEnv } from "@t3-oss/env-core";
 import { z } from "zod";
 
 export const env = createEnv({
-  extends: [db()],
+  extends: [db(), auth()],
   runtimeEnv: {
     PORT: process.env.PORT,
     WEB_URL: process.env.WEB_URL,
