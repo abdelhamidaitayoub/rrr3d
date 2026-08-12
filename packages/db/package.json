@@ -11,7 +11,7 @@
   "scripts": {
     "analyze": "prisma generate --no-hints --schema=./prisma/schema.prisma",
     "build": "prisma generate --no-hints --schema=./prisma/schema.prisma",
-    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "clean": "git clean -xdf .cache .turbo dist node_modules src/generated",
     "db:push": "prisma format --schema=./prisma/schema.prisma && prisma generate --no-hints --schema=./prisma/schema.prisma && prisma db push --schema=./prisma/schema.prisma",
     "migrate": "prisma format --schema=./prisma/schema.prisma && prisma generate --no-hints --schema=./prisma/schema.prisma && prisma migrate dev --schema=./prisma/schema.prisma",
     "migrate:deploy": "prisma generate --no-hints --schema=./prisma/schema.prisma && prisma migrate deploy --schema=./prisma/schema.prisma",

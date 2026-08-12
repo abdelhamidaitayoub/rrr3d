@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "bun run generate",
-    "clean": "git clean -xdf .turbo node_modules src/generated",
+    "clean": "git clean -xdf .turbo node_modules src/generated openapi-ts-error-*.log",
     "dev": "openapi-ts -f openapi-ts.config.ts -w",
     "generate": "openapi-ts -f openapi-ts.build.config.ts",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"

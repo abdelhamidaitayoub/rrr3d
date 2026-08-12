@@ -4,7 +4,7 @@
   "module": "src/index.js",
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target=bun",
-    "clean": "git clean -xdf node_modules",
+    "clean": "git clean -xdf .turbo dist node_modules openapi.json",
     "dev": "bun --env-file=.env run --watch src/index.ts",
     "openapi:export": "bun run scripts/export-openapi.ts",
     "start": "bun run src/index.ts",
