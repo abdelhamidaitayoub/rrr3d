@@ -16,6 +16,21 @@
       "!.agents"
     ]
   },
+  "overrides": [
+    {
+      "includes": ["scripts/**"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noAwaitInLoops": "off"
+          },
+          "suspicious": {
+            "noShadow": "off"
+          }
+        }
+      }
+    }
+  ],
   "linter": {
     "rules": {
       "performance": {
