@@ -1,5 +1,7 @@
 {
   "plugins": [["npm", { "setRcToken": false }], "first-time-contributor", "released"],
   "owner": "abdelhamidaitayoub",
-  "repo": "rrr3d"
+  "repo": "rrr3d",
+  "name": "Abdelhamid Ait-ayoub",
+  "email": "abdelhamidaitayoub@gmail.com"
 }
