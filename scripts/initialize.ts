@@ -37,7 +37,7 @@ const defaultApiUrl = "http://localhost:3001";
 
 const generateSecret = () => randomBytes(32).toString("base64url");
 
-const cloneTurbox = (
+const cloneRrr3d = (
   name: string,
   packageManager: PackageManagerName,
   branch?: string
@@ -287,7 +287,7 @@ export const initialize = async (options: {
     const projectDir = join(cwd, name);
 
     s.start("Cloning rrr3d template...");
-    cloneTurbox(name, packageManager, options.branch);
+    cloneRrr3d(name, packageManager, options.branch);
 
     s.message("Moving into repository...");
     process.chdir(projectDir);

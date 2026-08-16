@@ -1,7 +1,7 @@
 import { type SpawnSyncOptions, spawnSync } from "node:child_process";
 import { join } from "node:path";
 
-export const url = "https://github.com/abdelhamidaitayoub/turbox";
+export const url = "https://github.com/abdelhamidaitayoub/rrr3d";
 
 export const shellOption = process.platform === "win32";
 

@@ -4,7 +4,7 @@
   "description": "CLI to initialize rrr3d monorepo projects",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdelhamidaitayoub/turbox.git"
+    "url": "git+https://github.com/abdelhamidaitayoub/rrr3d.git"
   },
   "type": "module",
   "bin": {
