@@ -6,10 +6,15 @@ import { z } from "zod";
 export const env = createEnv({
   extends: [db(), auth()],
   runtimeEnv: {
+    ALLOWED_ORIGINS: process.env.ALLOWED_ORIGINS,
     PORT: process.env.PORT,
     WEB_URL: process.env.WEB_URL,
   },
   server: {
+    ALLOWED_ORIGINS: z
+      .string()
+      .transform((value) => value.split(",").map((v) => v.trim()))
+      .pipe(z.array(z.url())),
     PORT: z.coerce
       .number()
       .default(3001)
